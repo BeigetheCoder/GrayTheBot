@@ -26,7 +26,6 @@ async def on_message(message):
     channel = str(message.channel)
 
     print(f"{username} said: '{user_message}' [{channel}])")
-    print(message)
     response = responses.handle_response(message)
 
 #    await message.author.send(response) # reply in private
