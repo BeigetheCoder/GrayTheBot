@@ -30,7 +30,10 @@ def handle_response(message) -> str:
     if content.startswith("calculate"):
         value = subprocess.check_output(["python3","MiniCalculatorInterpreter/calculator.py", content.replace("calculate ","")  ], text=True)
         return value.strip()
-
+    
+    if "?" in content:
+        return "Yes!" if random.randint(1,10) < 6 else "No!"
+     
     return "." * random.randint(1,10)
 
 
