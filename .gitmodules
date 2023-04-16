@@ -1,0 +1,3 @@
+[submodule "MiniCalculatorInterpreter"]
+	path = MiniCalculatorInterpreter
+	url = git@github.com:hunglun/MiniCalculatorInterpreter.git
