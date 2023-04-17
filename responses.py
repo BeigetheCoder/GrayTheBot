@@ -33,6 +33,10 @@ def handle_response(message) -> str:
     
     if "?" in content:
         return "Yes!" if random.randint(1,10) < 6 else "No!"
+
+    if content.startswith("choose "):
+        options = content.replace("choose ","").split(",")
+        return options[random.randint(0,len(options)-1)]
      
     return "." * random.randint(1,10)
 
